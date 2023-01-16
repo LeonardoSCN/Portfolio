@@ -350,13 +350,14 @@ a {
 .section-projects {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 20px 30px;
   max-width: 960px;
   align-items: center;
   margin: 60px auto;
-
+  
 }
 
-.project1 h3::before {
+.project1 h3::before, .project2 h3::before, .project3 h3::before, .project4 h3::before, .project5 h3::before {
   content: "";
   width: 24px;
   height: 1px;
@@ -365,7 +366,7 @@ a {
   background-color: var(--salmao-escuro);
 }
 
-.project1 h3 {
+.project1 h3, .project2 h3, .project3 h3 {
   color: var(--azul-escuro);
   display: flex;
   justify-content: center;
@@ -374,13 +375,29 @@ a {
   margin-bottom: 20px;
 }
 
-.project1 p {
+.project4 h3 {
+  color: var(--azul-escuro);
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.project5 h3 {
+  color: var(--azul-escuro);
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.project1 p, .project2 p, .project3 p, .project4 p, .project5 p {
   color: var(--azul-claro);
   margin-left: 34px;
   margin-bottom: 20px;
 }
 
-.project1 button {
+.project1 button, .project2 button, .project3 button, .project4 button, .project5 button {
   background-color: #032326;
   margin-left: 34px;
   padding: 10px 15px;
@@ -389,16 +406,114 @@ a {
   box-shadow: 5px 5px 3px  rgb(186, 184, 184);
 }
 
-.project1 button:hover {
+.project1 button:hover, .project2 button:hover, .project3 button:hover , .project4 button:hover , .project5 button:hover  {
   background-color: var(--salmao-escuro);
   transition: 0.3s ease-in;
 }
 
-.project1 button a {
+.project1 button a, .project2 button a, .project3 button a, .project4 button a, .project5 button a {
   color: #fff;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 1.2px;
+}
+
+/* CONTACT */
+
+.contact {
+  background-color: #eee;
+}
+
+.contactme {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px;
+}
+
+.contactme h3 {
+  color: var(--azul-escuro);
+  font-size: 1.4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+}
+
+.contactme p {
+  color: var(--azul-escuro);
+
+}
+
+.contact-section {
+  display: grid;
+  grid-template-columns: auto;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  
+}
+
+.name, .email {
+  display: grid;
+  gap: 6px;
+  grid-template-columns: 460px;
+  
+  
+}
+
+.name input, .email input {
+  border: 0;
+  padding: 10px;
+  background-color: var(--azul-escuro);
+  border-radius: 4px;
+  outline: none;
+  color: #fff;
+}
+
+.name label, .email label {
+  color: var(--azul-escuro);
+  letter-spacing: 1.1px;
+}
+
+.email {
+  margin-top: 10px;
+}
+
+.email input {
+  margin-bottom: 20px;
+  
+}
+
+
+.contact-section textarea {
+  width: 460px;
+  resize: none;
+  outline: none;
+  background-color: var(--azul-escuro);
+  border-radius: 4px;
+  color: #fff;
+}
+
+.contact-section button {
+padding: 10px 30px;
+margin-top: 10px;
+text-transform: uppercase;
+letter-spacing: 1.2px;
+cursor: pointer;
+background-color: var(--azul-escuro);
+color: #fff;
+font-weight: 700;
+border: none;
+border-radius: 4px;
+box-shadow: 5px 5px 3px  rgb(186, 184, 184);
+}
+
+.contact-section button:hover {
+  background-color: var(--salmao-escuro);
+  transition: 0.3s ease-in;
 }
 
 /* MEDIA QUERIES */
@@ -416,6 +531,35 @@ a {
   }
   .skills p {
     text-align: center;
+  }
+  .section-projects {
+    margin: 2rem 1rem 2rem 4rem
+  }
+}
+
+@media(max-width: 600px) {
+  .section-projects {
+    grid-template-columns: 1fr;
+    align-items: center;
+    margin-left: 0.875rem;
+    margin-right: 0.875rem;
+  }
+  .project1 button, .project2 button, .project3 button, .project4 button,.project5 button {
+    margin-right: 34px;
+  }
+  .name, .email {
+    grid-template-columns: 240px;
+  }
+  .contact-section textarea {
+    max-width: 240px;
+  }
+  .contact-section {
+    padding: 20px 20px;
+  }
+
+  .contact-section {
+   
+    justify-content: center;
   }
 }
 

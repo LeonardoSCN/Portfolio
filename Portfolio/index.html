@@ -150,14 +150,39 @@
   </section>
 
   <section class="contact" id="contact">
-    <label for="">Name</label>
-    <input type="text">
+    
+    <div class="contact-section">
 
-    <label for="">Email</label>
-    <input type="text">
+      <div class="contactme">
+        <h3>Contact</h3>
+        <p>Feel free to contact me.</p>
+      </div>
 
-    <textarea name="" id="" cols="30" rows="10"></textarea>
-    <button>Submit</button>
+      <form onsubmit="sendEmail(); reset(); return false">
+        <div class="name">
+          <label for="">Name</label>
+          <input type="text" placeholder="Your name." id="name" required>
+        </div>
+        
+        <div class="email">
+          <label for="">Email</label>
+          <input type="email" placeholder="Your Email" id="email" required>
+        </div>
+  
+        <div>
+          <textarea name="" id="message"  rows="5" placeholder="How can i help you?"></textarea>
+        </div>
+        
+        <div>
+          <button type="submit">Send</button>
+        </div>
+
+      </form>
+
+    </div>
+    
+
+
   </section>
 
   <footer class="footer">
@@ -176,6 +201,7 @@
     
   </footer>
 
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="index.js"></script>
 </body>
 </html>
